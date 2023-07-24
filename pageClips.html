@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "chrome=1">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
+
+		<link rel = "stylesheet" href = "stylesheets/1defaultStyles.css">
+		<link rel = "stylesheet" href = "stylesheets/github-dark.css">
+		<link rel = "stylesheet" href = "stylesheets/scrolltoTopBtn.css">
+		
+		<script src = "javascripts/respond.js"> </script>
+		<script src = "javascripts/jquery-1.9.0.min.js"> </script>
+				
+		<title> pochita's clips </title>
+	</head>
+  
+	<body>
+		<div id = "header">
+			<nav>
+				<li class = "topTab"> <a href = "index.html"> HOME </a> </li>
+				<li class = "topTab"> <a href = "pagePhotos.html"> GALLERY </a> </li>
+				<li class = "topTab"> <a href = "pageClips.html"> CLIPS </a> </li>
+				<li class = "topTab"> <a href = "pageAbout.html"> ABOUT </a> </li>
+			</nav>
+		</div>
+
+		<div class = "wrapper">
+			<section>
+				<h1> <center> ポチタのgameclips </center> </h1> 
+				<hr>
+
+				<div class = "videoRow">
+					<div class = "videoCol">
+						<div class = "videoFeatured">
+							<img src = "images/frog0.png" width = "100%">
+							<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2023.04.09] Anti-air.mp4')">
+						</div>
+					</div>
+					
+					<div class = "videoCol">
+						<div class = "videoSmall_img_row">
+							<div class = "videoSmall_img">
+								<img src = "images/frog0.png">
+								<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2023.04.09] Confused 180.mp4')">
+							</div>
+						</div>
+					
+						<div class = "videoSmall_img_row">
+							<div class = "videoSmall_img">
+								<img src = "images/frog0.png">
+								<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2020] 3k.mp4')">
+							</div>
+						</div>
+
+						<div class = "videoSmall_img_row">
+							<div class = "videoSmall_img">
+								<img src = "images/frog0.png">
+								<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2020] blind_pick.mp4')">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class = "videoBox" id = "videoPlayer">
+			<center>
+				<video width = "90%" height = 90% controls autoplay id = "videoClip">
+					<source src = "videos/[2023.04.09] Anti-air.mp4" type = "video/mp4">
+				</video>
+			</center>
+			<img src = "images/close.png" class = "closeButton" onclick = "stopVideo()">
+		</div>
+		
+		<script src = "javascripts/clips.js"> </script>
+
+		<button class = "scrollToTopBtn showBtn" type = "button">
+			<img src = "images/arrowUp.svg" border = "0" width = 16em height = 16em>
+		</button>
+		<script src = "javascripts/scrolltoTop.js"> </script>
+	</body>
+</html>
