@@ -1,4 +1,4 @@
-/* IMPORT FONTS */
+/* || IMPORT FONTS */
 @font-face {
   font-family: 'OpenSansLight';
   src: url("../fonts/OpenSans-Light-webfont.eot");
@@ -165,7 +165,7 @@ a:active {
   outline: 0;
 }
 
-/* FONTS */
+/* || FONTS */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -510,7 +510,7 @@ table {
   border-spacing: 0;
 }
 
-/* STYLING - body */
+/* || body */
 body {
   padding: 0px 0px 20px 0px;
   margin: 0px;
@@ -528,7 +528,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #e8e8e8;
   margin: 0 0 10px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
@@ -561,7 +560,6 @@ h3 {
   font-size: 27px;
   line-height: 150%;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-weight: normal;
   color: #6fbdbe;
 }
 
@@ -577,7 +575,6 @@ a {
 
 a:hover {
   color: #ffeb9b;
-  /* text-decoration: none; */
 }
 
 a small {
@@ -599,7 +596,6 @@ strong {
 	padding: 0 20px;
 }
 
-/* Others */
 section img {
   max-width: 100%;
 }
@@ -642,6 +638,7 @@ pre {
   overflow: auto;
   overflow-y: hidden;
 }
+
 pre code {
   color: #efefef;
   text-shadow: 0px 1px 0px #000;
@@ -683,8 +680,8 @@ dt {
   font-weight: normal;
 }
 
-/* WEBSITE HEADER */
-#header {
+/* || Website header */
+.header {
   z-index: 100;
   left: 0;
   top: 0;
@@ -696,40 +693,52 @@ dt {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -o-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
-#header nav {
+.header nav {
   max-width: 42em;
   padding: 0 10px;
   background: black;
   margin: 6px auto;
 }
 
-#header nav li {
+.header nav li {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
-#header nav li a {
+.header nav li a {
   color: white;
   padding: 0.6em 1em 0em 1em;
   margin-top: 4px;
-  line-height: 14px;
   font-size: 1.2em;
+  line-height: 14px;
   display: inline-block;
   text-align: center;
   text-decoration: none;
 }
 
-#header nav li.topTab {
-	position: relative;
-	display: flex;
-	align-items: center;
-	margin: 0 1.5em 0 1.5em;
+.cbp-af-header-shrink {
+  height: 3.5em;
+  font-size: 0.8em;
+  opacity: 0.4;
+}
+
+.cbp-af-header-shrink.header nav li a {
+  padding-top: 0.3em;
+}
+
+.header nav li.topTab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 1.5em 0 1.5em;
   float: left;
 }
 
-#header nav li.topTab:after {
+.header nav li.topTab:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -742,12 +751,12 @@ dt {
   transition: transform 0.5s ease-out;
 }
 
-#header nav li.topTab:hover:after {
+.header nav li.topTab:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-/* STYLING FOR section */
+/* || section */
 section {
   max-width: 650px;
   padding: 30px 0px 50px 0px;
@@ -767,13 +776,6 @@ section #title h1 {
   text-align: center;
   line-height: 36px;
 }
-section #title p {
-  color: #d7cfbe;
-  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  text-align: center;
-}
 section #title .credits {
   font-size: 11px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -788,7 +790,47 @@ section #title .credits.right {
   float: right;
 }
 
-/* Styling for Video Page */
+.galleryLink, .clipLink, .aboutLink {
+  font-size: 2em;
+  display: inline-block;
+  text-align: center;
+  margin: 0em 2.5em 1em 2.5em;
+  position: relative;
+}
+
+.galleryLink:after, .clipLink:after, .aboutLink:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -0.2em;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.galleryLink:hover:after, .clipLink:hover:after, .aboutLink:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.galleryExpand, .clipExpand, .aboutExpand {
+  font-size: 1.5em;
+  color: transparent;
+  position: absolute;
+  display: block;
+  width: 650px;
+  text-align: center;
+}
+
+.galleryLink:hover ~ .galleryExpand, .clipLink:hover ~ .clipExpand, .aboutLink:hover ~ .aboutExpand{
+  color: white;
+  transition: all 1.2s ease-in;
+}
+
+/* || Video Page */
 .videoRow {
 	display: flex;
 	align-items: center;
@@ -860,7 +902,7 @@ video:focus {
 	cursor: pointer;
 }
 
-/* Fixed container box for time */
+/* || A fixed container box for time */
 .timeBox {
   background-color: #6fbdbe;
   border: none;
@@ -875,14 +917,16 @@ video:focus {
   left: 1em;
   z-index: 100;
   opacity: 0.4;
+  transition: all 2s ease;
 }
 
 .timeBox:hover {
   background-color: #6fbdbe;
   opacity: 1;
+  transition: all 2s ease;
 }
 
-/* STYLING FOR MEDIA OF DIFFERENT SIZES */
+/* || STYLING FOR MEDIA OF DIFFERENT SIZES */
 @media print, screen and (max-width: 1080px) {
   .timeBox {
     opacity: 0;
