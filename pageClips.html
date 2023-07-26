@@ -8,7 +8,8 @@
 		<link rel = "stylesheet" href = "stylesheets/mainStyle.css">
 		<link rel = "stylesheet" href = "stylesheets/github-dark.css">
 		<link rel = "stylesheet" href = "stylesheets/scrolltoTopBtn.css">
-				
+		<link rel = "stylesheet" href = "stylesheets/jquery.fs.wallpaper.css">
+
 		<title> pochita's clips </title>
 	</head>
   
@@ -22,44 +23,59 @@
 			</nav>
 		</div>
 
-		<div class = "wrapper">
-			<section>
-				<h1> <center> ポチタのgameclips </center> </h1> 
-				<hr>
+		
 
-				<div class = "videoRow">
-					<div class = "videoCol">
-						<div class = "videoFeatured">
-							<img src = "images/frog0.png" width = "100%">
-							<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2023.04.09] Anti-air.mp4')">
+		<div class = videoWrapper>
+			<section class = videoSection>
+				<h1> <center> D アダム </center> </h1>
+				<hr>
+			</section>
+
+			<div class = videoContainer>
+				<iframe src = "https://www.youtube.com/embed/E_NyZr7oLdk">
+				</iframe>
+			</div>
+		</div>
+
+		<div class = videoWrapper>
+			<section class = videoSection>
+				<h1> <center> ポチタのgameclips </center> </h1>
+				<hr>
+			</section>
+
+			<div class = "videoRow">
+				<div class = "videoCol">
+					<div class = "videoFeatured">
+						<img src = "images/frog0.png" width = "100%">
+						<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2023.04.09] Anti-air.mp4')">
+					</div>
+				</div>
+				
+				<div class = "videoCol">
+					<div class = "videoSmall_img_row">
+						<div class = "videoSmall_img">
+							<img src = "images/frog0.png">
+							<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2023.04.09] Confused 180.mp4')">
 						</div>
 					</div>
-					
-					<div class = "videoCol">
-						<div class = "videoSmall_img_row">
-							<div class = "videoSmall_img">
-								<img src = "images/frog0.png">
-								<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2023.04.09] Confused 180.mp4')">
-							</div>
+				
+					<div class = "videoSmall_img_row">
+						<div class = "videoSmall_img">
+							<img src = "images/frog0.png">
+							<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2020] 3k.mp4')">
 						</div>
-					
-						<div class = "videoSmall_img_row">
-							<div class = "videoSmall_img">
-								<img src = "images/frog0.png">
-								<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2020] 3k.mp4')">
-							</div>
-						</div>
+					</div>
 
-						<div class = "videoSmall_img_row">
-							<div class = "videoSmall_img">
-								<img src = "images/frog0.png">
-								<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2020] blind_pick.mp4')">
-							</div>
+					<div class = "videoSmall_img_row">
+						<div class = "videoSmall_img">
+							<img src = "images/frog0.png">
+							<img src = "images/play.png" class = "playButton" onclick = "playVideo('videos/[2020] blind_pick.mp4')">
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</div>
+		
 
 		<div class = "videoBox" id = "videoPlayer">
 			<center>
@@ -80,5 +96,6 @@
 		<script src = "javascripts/jquery-1.9.0.min.js"> </script>
 		<script src = "javascripts/classie.js"> </script>
 		<script src = "javascripts/cbpAnimatedHeader.js"> </script>
+		<script src = "javascripts/jquery.fs.wallpaper.min.js"> </script>
 	</body>
 </html>
