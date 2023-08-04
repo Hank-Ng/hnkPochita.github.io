@@ -1,3 +1,4 @@
+// scroll to top function
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
 var rootElement = document.documentElement
 
@@ -22,3 +23,13 @@ function scrollToTop() {
 
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
+
+
+// play audio file
+const gekkoArray = ["audio/GekkoCommend1.mp3", "audio/GekkoCommend2.mp3", "audio/GekkoCommend3.mp3"];
+
+function playGekko() {
+    const audioIndex = Math.floor(Math.random() * gekkoArray.length);
+    const audio = new Audio(gekkoArray[audioIndex]);
+    audio.play();
+}

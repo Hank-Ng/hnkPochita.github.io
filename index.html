@@ -32,8 +32,8 @@
 					<h1> pochita's corner </h1>
 					<br>
 					<hr>
-					<span class="credits left"> Author's Github <a href = "https://github.com/Hank-Ng"> here </a> </span>
-					<span class="credits right"> Updated July 2023 </span>
+					<span class = "credits left"> Author's Github <a href = "https://github.com/Hank-Ng"> here </a> </span>
+					<span class = "credits right"> Updated July 2023 </span>
 				</div>
 
 				<div id = "home">
@@ -51,10 +51,57 @@
 				<center> <h2> find pochita </h2> </center>
 				<br>
 				
-				<a href = "https://steamcommunity.com/id/xxxktrebel/" target = "_blank"> 
-					<center> <img src = "images/steamIcon.svg" alt = "steam icon" width = 25% height = 25%> </center>
-				</a>
-		   
+				<div class = responsiveLogo>
+					<a href = "https://steamcommunity.com/id/xxxktrebel/" target = "_blank"> 
+						<center> <img src = "images/steamIcon.svg" alt = "Steam Icon"> </center>
+					</a>
+				</div>
+				<br>
+				<hr>
+			</section>
+
+			<section>
+				<!-- Text Animation -->
+				<div class = "txtAni">
+					<div class = "txtAni__container">
+						<p class = "txtAni__container__text">
+							make some
+						</p>
+						
+						<ul class = "txtAni__container__list">
+						<li class = "txtAni__container__list__item"> coffee </li>
+						<li class = "txtAni__container__list__item"> コーヒー </li>
+						<li class = "txtAni__container__list__item"> 珈琲 </li>
+						<li class = "txtAni__container__list__item"> koffee </li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Wiggle Button, Coffee Machine -->
+				<button class = wiggleButton onclick = "playGekko()"> pour </button>
+				<br> <br>
+
+				<div class = "container">
+					<div class = "coffee-header">
+						<div class = "coffee-header__buttons coffee-header__button-one"></div>
+						<div class = "coffee-header__buttons coffee-header__button-two"></div>
+						<div class = "coffee-header__display"></div>
+						<div class = "coffee-header__details"></div>
+					</div>
+
+					<div class = "coffee-medium">
+						<div class = "coffe-medium__exit"></div>
+						<div class = "coffee-medium__arm"></div>
+						<div class = "coffee-medium__liquid"></div>
+						<div class = "coffee-medium__smoke coffee-medium__smoke-one"></div>
+						<div class = "coffee-medium__smoke coffee-medium__smoke-two"></div>
+						<div class = "coffee-medium__smoke coffee-medium__smoke-three"></div>
+						<div class = "coffee-medium__smoke coffee-medium__smoke-for"></div>
+						<div class = "coffee-medium__cup"></div>
+					</div>
+					<div class = "coffee-footer"> </div>
+				</div>
+
 			</section>
 		</div>
 
@@ -65,7 +112,7 @@
 			<img src = "images/arrowUp.svg" border = "0" width = 16em height = 16em>
 		</button>
 
-		<script src = "javascripts/scrolltoTop.js"> </script>
+		<script src = "javascripts/hnkFunctions.js"> </script>
 		<script src = "javascripts/respond.js"> </script>
 		<script src = "javascripts/jquery-1.9.0.min.js"> </script>
 		<script src = "javascripts/classie.js"> </script>
