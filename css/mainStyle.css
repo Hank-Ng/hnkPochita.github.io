@@ -865,7 +865,6 @@ section #title .credits.right {
   transform: translate(-50%, -50%);
   height: 160px;
   overflow: hidden;
-  
   font-family: 'Lato', sans-serif;
   font-size: 35px;
   line-height: 40px;
@@ -985,50 +984,6 @@ padding: 0 40px;
   49.98%,62.64% {transform:translate3d(0,-75%,0);}
   66.64%,79.3% {transform:translate3d(0,-50%,0);}
   83.3%,95.96% {transform:translate3d(0,-25%,0);}
-}
-
-/* || Wiggle Button */
-.wiggleButton {
-  position: absolute;
-  left: calc(50% - 4em);
-  top: calc(50% + 8.5em);
-  height: 5em;
-  width: 8em;
-  background: linear-gradient(to top, #a48254 0%, #eacda3 100%);
-  border: none;
-  border-top: 3px solid orange;
-  border-radius: 0 0 0.2em 0.2em;
-  color: #fff;
-  font-size: 2em;
-  transform-origin: 50% 5em;
-}
-
-.wiggleButton:hover {
-  animation: wiggle 2s linear infinite;
-}
-
-@keyframes wiggle {
-  0%, 7% {
-    transform: rotateZ(0);
-  }
-  15% {
-    transform: rotateZ(-15deg);
-  }
-  20% {
-    transform: rotateZ(10deg);
-  }
-  25% {
-    transform: rotateZ(-10deg);
-  }
-  30% {
-    transform: rotateZ(6deg);
-  }
-  35% {
-    transform: rotateZ(-4deg);
-  }
-  40%, 100% {
-    transform: rotateZ(0);
-  }
 }
 
 /* || Coffee Machine */
@@ -1289,6 +1244,199 @@ padding: 0 40px;
   left: -8px;
   background-color: #000;
 }
+
+/* || Wiggle Button */
+.wiggleButton {
+  position: relative;
+  left: calc(50% - 4em);
+  top: calc(50% + 8.5em);
+  height: 5em;
+  width: 8em;
+  background: linear-gradient(to top, #a48254 0%, #eacda3 100%);
+  border: none;
+  border-top: 3px solid orange;
+  border-radius: 0 0 0.2em 0.2em;
+  color: #fff;
+  font-size: 2em;
+  transform-origin: 50% 5em;
+}
+
+.wiggleButton:hover {
+  animation: wiggle 2s linear infinite;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* || Animated Button */
+@-webkit-keyframes extend {
+  0% {
+      width: 600px;
+      height: 200px;
+      border-radius: 100px;
+      } 10% {
+      width: 610px;
+      height: 210px;
+      background: #fff;
+      margin-left: - 5px;
+      margin-top: - 5px;
+      } 20% {
+      width: 600px;
+      height: 200px;
+      background: #6fb07f;
+      margin-left: 0px;
+      margin-top: 0px;
+      } 100% {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      margin-left: 190px;
+      background: #6fb07f;
+      }
+}
+@keyframes extend {
+  0% {
+      width: 600px;
+      height: 200px;
+      border-radius: 100px;
+      } 10% {
+      width: 610px;
+      height: 210px;
+      background: #fff;
+      margin-left: - 5px;
+      margin-top: - 5px;
+      } 20% {
+      width: 600px;
+      height: 200px;
+      background: #6fb07f;
+      margin-left: 0px;
+      margin-top: 0px;
+      } 100% {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      margin-left: 190px;
+      background: #6fb07f;
+      }
+}
+@-webkit-keyframes disappear {
+  0% { opacity: 1;
+      }
+  20% { color: #fff;
+      }    
+  100% { opacity: 0;
+      }
+}
+@keyframes disappear {
+  0% { opacity: 1;
+      }
+  20% { color: #fff;
+      } 
+  100% { opacity: 0;
+      }
+}
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+@keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+}
+
+.animateButtonContainer {
+    position: relative;
+    width: 610px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -300px
+    }
+.animateButton {
+    border-width: 1px;
+    width: 600px;
+    height: 200px;
+    /*border-radius*/
+    border-radius: 100px;
+    background: #fff;
+    position: relative;
+    border: 5px solid #6fb07f
+}
+.animateButton > span {
+    font-size: 48px;
+    color: #6fb07f
+}
+.animateButtonimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0
+}
+
+.animateButton:focus {
+    /*animation*/
+    -webkit-animation: extend 1s ease-in-out;
+    -ms-animation: extend 1s ease-in-out;
+    animation: extend 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+}
+.animateButton:focus > span {
+  /*animation*/
+  -webkit-animation: disappear 1s ease-in-out;
+  -ms-animation: disappear 1s ease-in-out;
+  animation: disappear 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards
+}
+.animateButton:focus > img {
+  /*animation*/
+  -webkit-animation: appear 1s ease-in-out;
+  -ms-animation: appear 1s ease-in-out;
+  animation: appear 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards
+}
+
 
 /* || Gallery Page */
 .galleryWrapper {
